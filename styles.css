@@ -1,0 +1,159 @@
+/* Блокова модель */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Селектор тегу */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7;
+    color: #222;
+    padding: 30px;
+}
+
+/* Основний макет — CSS Grid */
+.cv-container {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #dbe3ef;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 30px 25px;
+}
+
+.profile {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Селектор ID */
+#cv-name {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.main-content {
+    min-width: 0;
+    padding: 35px;
+}
+
+.block {
+    margin-bottom: 35px;
+}
+
+.block h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dbeafe;
+    color: #1e3a8a;
+}
+
+.sidebar .block h2 {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.job,
+.education {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+}
+
+.job-subtitle {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.sidebar p,
+.sidebar li {
+    color: #e2e8f0;
+}
+
+a {
+    color: #bfdbfe;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+/* Селектор атрибута */
+a[href^="mailto:"] {
+    font-weight: bold;
+}
+
+/* Псевдоклас наведення */
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Псевдоклас фокусу з клавіатури */
+a:focus-visible {
+    outline: 2px solid #fbbf24;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* Адаптація до вузького екрана */
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+    }
+
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar,
+    .main-content {
+        padding: 24px 20px;
+    }
+
+    .profile {
+        margin-bottom: 25px;
+    }
+
+    #cv-name {
+        font-size: 26px;
+    }
+}

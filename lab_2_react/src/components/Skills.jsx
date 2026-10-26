@@ -1,26 +1,45 @@
 export default function Skills() {
   return (
-    <section>
-      <h2>Навички</h2>
+    <section className="mb-8 rounded-2xl bg-white p-6 shadow-md">
+      <h2 className="mb-4 border-b-2 border-blue-200 pb-2 text-2xl font-bold text-blue-900">
+        Навички
+      </h2>
 
-      <h3>Мови та розмітка</h3>
-      <ul>
-        <li>HTML — створення структури вебсторінок</li>
-        <li>JavaScript — вивчення основ програмування</li>
-      </ul>
+      <div className="grid gap-6 md:grid-cols-2">
+        <div>
+          <h3 className="mb-2 text-lg font-semibold">Мови та розмітка</h3>
+          <ul className="list-disc space-y-1 pl-5 text-gray-700">
+            <li>HTML</li>
+            <li>JavaScript — основи</li>
+          </ul>
+        </div>
 
-      <h3>Фреймворки та бібліотеки</h3>
-      <ul>
-        <li>React — вивчення компонентного підходу</li>
-      </ul>
+        <div>
+          <h3 className="mb-2 text-lg font-semibold">Бібліотеки</h3>
+          <ul className="list-disc space-y-1 pl-5 text-gray-700">
+            <li>React — компонентний підхід</li>
+          </ul>
+        </div>
 
-      <h3>Інструменти та технології</h3>
-      <ul>
-        <li>Visual Studio Code</li>
-        <li>Git і GitHub</li>
-        <li>Node.js і npm</li>
-        <li>Vite</li>
-      </ul>
+        <div>
+          <h3 className="mb-2 text-lg font-semibold">Інструменти</h3>
+          <ul className="list-disc space-y-1 pl-5 text-gray-700">
+            <li>Visual Studio Code</li>
+            <li>Git і GitHub</li>
+            <li>Node.js і npm</li>
+            <li>Vite</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="mb-2 text-lg font-semibold">Стилізація</h3>
+          <ul className="list-disc space-y-1 pl-5 text-gray-700">
+            <li>CSS</li>
+            <li>Tailwind CSS</li>
+            <li>Адаптивні макети на CSS Grid</li>
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }

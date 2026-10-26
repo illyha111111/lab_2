@@ -7,17 +7,19 @@ import Footer from './components/Footer.jsx';
 
 export default function App() {
   return (
-    <>
-      <Header />
+    <div className="min-h-screen bg-slate-100 px-4 py-6 text-slate-800 sm:px-6 sm:py-10">
+      <div className="mx-auto max-w-4xl">
+        <Header />
 
-      <main>
-        <About />
-        <Skills />
-        <Experience />
-        <Education />
-      </main>
+        <main>
+          <About />
+          <Skills />
+          <Experience />
+          <Education />
+        </main>
 
-      <Footer />
-    </>
+        <Footer />
+      </div>
+    </div>
   );
 }
