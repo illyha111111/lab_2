@@ -1,1 +1,73 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Стандартні елементи браузера */
+.resume-page {
+    color-scheme: light;
+}
+
+.resume-page.dark {
+    color-scheme: dark;
+    @apply bg-slate-950 text-slate-100;
+}
+
+/* Білі картки та модальна форма */
+.resume-page.dark .bg-white {
+    @apply bg-slate-800;
+}
+
+/* Внутрішні блоки досвіду, освіти та відгуків */
+.resume-page.dark .bg-slate-50 {
+    @apply bg-slate-700;
+}
+
+/* Заголовки */
+.resume-page.dark .text-blue-900 {
+    @apply text-blue-200;
+}
+
+.resume-page.dark .text-gray-800 {
+    @apply text-slate-100;
+}
+
+/* Основний текст */
+.resume-page.dark .text-gray-700,
+.resume-page.dark .text-gray-600 {
+    @apply text-slate-200;
+}
+
+/* Допоміжний текст */
+.resume-page.dark .text-gray-500,
+.resume-page.dark .text-slate-500 {
+    @apply text-slate-300;
+}
+
+/* Текст полів форми */
+.resume-page.dark .text-slate-900 {
+    @apply text-slate-100;
+}
+
+/* Межі карток і полів */
+.resume-page.dark .border-blue-200,
+.resume-page.dark .border-slate-300 {
+    @apply border-slate-600;
+}
+
+/* Посилання та повідомлення про помилки */
+.resume-page.dark a.text-blue-700 {
+    @apply text-blue-300;
+}
+
+.resume-page.dark a.text-blue-700:hover {
+    @apply text-blue-100;
+}
+
+.resume-page.dark .text-red-700 {
+    @apply text-red-300;
+}
+
+.resume-page.dark .close-modal,
+.resume-page.dark button[aria-label="Закрити форму"]:hover {
+    @apply text-white;
+}

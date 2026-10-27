@@ -18,12 +18,21 @@
     <div class="cv-container">
         <aside class="sidebar">
             <header class="profile">
-                <h1 id="cv-name">Бобу Ілля</h1>
-                <p class="subtitle">Студент групи КБ-402</p>
-                <p style="font-style: italic;">
-                    Лабораторна робота №3. Варіант 3.
-                </p>
-            </header>
+    <h1 id="cv-name">Бобу Ілля</h1>
+    <p class="subtitle">Студент групи КБ-402</p>
+    <p style="font-style: italic;">
+        Лабораторна робота №4. Варіант 3.
+    </p>
+
+    <button
+        id="themeToggle"
+        class="theme-button"
+        type="button"
+        aria-pressed="false"
+    >
+        Перемкнути тему
+    </button>
+</header>
 
             <footer class="block">
                 <h2>Контакти</h2>
@@ -33,10 +42,11 @@
                     </a>
                 </p>
                 <p>
-                    <a href="https://lpnu.ua/">
-                        Сайт університету
-                    </a>
+                    <a href="https://lpnu.ua/">Сайт університету</a>
                 </p>
+
+                <h2>Інформація із localStorage</h2>
+                <pre id="storageInfo" class="storage-info"></pre>
             </footer>
 
             <section class="block">
@@ -77,7 +87,6 @@
 
             <section class="block">
                 <h2>Досвід роботи</h2>
-
                 <article class="job">
                     <h3>Навчальні проєкти</h3>
                     <p class="job-subtitle">
@@ -101,10 +110,11 @@
 
             <section class="block">
                 <h2>Освіта</h2>
-
                 <div class="education">
-                    <h3>Національний університет
-                        «Львівська політехніка»</h3>
+                    <h3>
+                        Національний університет
+                        «Львівська політехніка»
+                    </h3>
                     <p>Студент групи КБ-402.</p>
                     <p>
                         Вивчаю дисципліни, пов’язані із захистом
@@ -112,7 +122,73 @@
                     </p>
                 </div>
             </section>
+
+            <section class="block">
+                <h2>Коментарі попередніх роботодавців</h2>
+                <p>Навчальні відгуки, отримані із JSONPlaceholder.</p>
+                <div id="comments" aria-live="polite">
+                    Завантаження коментарів…
+                </div>
+            </section>
         </main>
     </div>
+
+    <dialog id="contactModal" aria-labelledby="contactTitle">
+        <button
+            id="closeModal"
+            class="close-modal"
+            type="button"
+            aria-label="Закрити форму"
+        >
+            ×
+        </button>
+
+        <h2 id="contactTitle">Форма зворотного зв’язку</h2>
+
+        <form
+            action="https://formspree.io/f/xzeeeyap"
+            method="POST"
+            class="contact-form"
+        >
+            <label for="contactName">Ім’я</label>
+            <input
+                id="contactName"
+                type="text"
+                name="name"
+                autocomplete="name"
+                required
+            >
+
+            <label for="contactEmail">Email</label>
+            <input
+                id="contactEmail"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+            >
+
+            <label for="contactPhone">Номер телефону</label>
+            <input
+                id="contactPhone"
+                type="tel"
+                name="phone"
+                autocomplete="tel"
+                required
+            >
+
+            <label for="contactMessage">Повідомлення</label>
+            <textarea
+                id="contactMessage"
+                name="message"
+                rows="4"
+                required
+            ></textarea>
+
+            <button type="submit">Надіслати</button>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
 </body>
 </html>

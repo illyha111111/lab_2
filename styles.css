@@ -157,3 +157,206 @@ a:focus-visible {
         font-size: 26px;
     }
 }
+.storage-info {
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.comments-list {
+    display: grid;
+    gap: 16px;
+}
+
+.comment-card {
+    padding: 20px;
+    border-left: 4px solid #2563eb;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    overflow-wrap: anywhere;
+}
+
+.comment-card h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.comment-email {
+    font-size: 14px;
+    color: #555;
+}
+
+.comment-body {
+    margin-bottom: 0;
+    white-space: pre-line;
+}
+#contactModal {
+    width: min(460px, calc(100% - 32px));
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    margin: auto;
+    padding: 28px;
+    border: none;
+    border-radius: 16px;
+    background-color: #fff;
+    color: #222;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+#contactModal::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#contactTitle {
+    margin-bottom: 20px;
+    padding-right: 25px;
+    color: #1e3a8a;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: none;
+    background: transparent;
+    color: #555;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    background-color: #fff;
+    color: #222;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.contact-form button[type="submit"] {
+    margin-top: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #1e40af;
+}
+/* Кнопка перемикання теми */
+.theme-button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #fbbf24;
+    color: #172554;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.theme-button:hover {
+    background-color: #f59e0b;
+}
+
+.theme-button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+/* Кольори стандартних елементів браузера */
+body {
+    color-scheme: light;
+}
+
+body.dark {
+    color-scheme: dark;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark .cv-container {
+    background-color: #1e293b;
+    border-color: #475569;
+}
+
+body.dark .sidebar {
+    background-color: #172554;
+}
+
+body.dark .main-content {
+    background-color: #1e293b;
+}
+
+body.dark .block h2 {
+    color: #bfdbfe;
+    border-bottom-color: #475569;
+}
+
+body.dark .job,
+body.dark .education,
+body.dark .comment-card {
+    background-color: #334155;
+    border-left-color: #60a5fa;
+}
+
+body.dark .job-subtitle,
+body.dark .comment-email {
+    color: #cbd5e1;
+}
+
+body.dark .comment-card h3 {
+    color: #bfdbfe;
+}
+
+/* Темна тема модальної форми */
+body.dark #contactModal {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark #contactTitle {
+    color: #bfdbfe;
+}
+
+body.dark .close-modal {
+    color: #e2e8f0;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+    background-color: #334155;
+    color: #fff;
+    border-color: #64748b;
+}

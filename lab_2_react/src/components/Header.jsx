@@ -4,7 +4,7 @@ export default function Header() {
       <h1 className="text-3xl font-bold">Резюме — Бобу Ілля</h1>
       <p className="mt-2 text-lg">Студент групи КБ-402</p>
       <p className="mt-1 text-sm text-blue-100">
-        Лабораторна робота №3. Варіант 3.
+        Лабораторна робота №4. Варіант 3.
       </p>
     </header>
   );
